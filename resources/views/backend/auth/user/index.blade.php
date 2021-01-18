@@ -40,15 +40,15 @@
                         <table id="myTable" class="table table-bordered table-striped">
                             <thead>
                             <tr>
-                                <th>@lang('labels.general.sr_no')</th>
-                                <th>@lang('labels.general.id')</th>
+                                <th>@lang('no')</th>
+                                <th>@lang('id')</th>
                                 <th>@lang('labels.backend.access.users.table.first_name')</th>
                                 <th>@lang('labels.backend.access.users.table.last_name')</th>
                                 <th>@lang('labels.backend.access.users.table.email')</th>
-                                <th>@lang('labels.backend.access.users.table.confirmed')</th>
                                 <th>@lang('labels.backend.access.users.table.roles')</th>
                                 <th>@lang('labels.backend.access.users.table.other_permissions')</th>
-                              <th>@lang('actions')</th>
+                                <th>@lang('labels.backend.access.users.table.last_updated')</th>
+                                <th>@lang('actions')</th>
                             </tr>
                             </thead>
                             <tbody>
