@@ -103,5 +103,29 @@ return array (
         ),
       ),
     ),
-  )
+  ),
+
+  'frontend' => 
+  array (
+  'modal' => 
+  array (
+    'new_user_note' => 'New User? Register Here',
+    'registration_message' => 'Registration Successful. Please LogIn',
+    'my_account' => 'My Account',
+    'login_register' => '<a href="#" class="font-weight-bold go-login px-0">LOGIN</a> to our website, or <a href="#" class="font-weight-bold go-register px-0" id="">REGISTER</a>',
+    'already_user_note' => 'Already a user? Login Here',
+    'login_now' => 'LogIn Now',
+    'register_now' => 'Register Now',
+  ),
+  'passwords' => 
+  array (
+    'reset_password_box_title' => 'Reset Password',
+    'send_password_reset_link_button' => 'Send Password Reset Link',
+    'expired_password_box_title' => 'Your password has expired.',
+    'update_password_button' => 'Update Password',
+    'reset_password_button' => 'Reset Password',
+    'forgot_password' => 'Forgot Your Password?',
+  ),
+
+),
 );

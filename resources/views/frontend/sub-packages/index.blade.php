@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('title', trans('labels.frontend.cart.subscripe').' | '.app_name())
+@section('title', trans('subscripe').' | '.app_name())
 
 @push('after-styles')
   
@@ -80,7 +80,7 @@ section.pricing {
         <div class="container">
             <div class="page-breadcrumb-content text-center">
                 <div class="page-breadcrumb-title">
-                    <h2 class="breadcrumb-head black bold"><span>@lang('labels.frontend.subscripe')</span> </h2>
+                    <h2 class="breadcrumb-head black bold"><span>@lang('subscripe')</span> </h2>
                 </div>
             </div>
         </div>
@@ -94,8 +94,7 @@ section.pricing {
     <section id="checkout" class="checkout-section">
         <div class="container">
             <div class="section-title mb45 headline text-center">
-                <span class="subtitle text-uppercase">@lang('labels.frontend.cart.your_shopping_cart')</span>
-                <h2>اشترك في جميع الدورات</h2>
+               <h2>see all products</h2>
             </div>
             <div class="checkout-content">
                 @if(session()->has('danger'))
@@ -106,13 +105,7 @@ section.pricing {
                 @endif
                 <div class="row">
                     <div class="col-md-9">
-                        <div class="order-item mb30 course-page-section">
-                            <div class="section-title-2  headline text-right">
-                                <h2>@lang('labels.frontend.cart.order_item')</h2>
-                            </div>
-
-                           
-                        </div>
+                      
                
 
 
@@ -134,19 +127,34 @@ section.pricing {
               <div class="card mb-5 mb-lg-0">
                 <div class="card-body">
                   <h5 class="card-title text-muted text-uppercase text-center">{{ $subPackage->title }}</h5>
-                  <h6 class="card-price text-center">  {{' USD '.$subPackage->price}}<span class="period"> </span></h6>
+                  <h6 class="card-price text-center">  {{$subPackage->price .' USD '}}<span class="period"> </span></h6>
                   <hr>
                   <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>مشاهده جميع الدورات</li>
-                    <li><span class="fa-li"><i class="fas fa-check"></i></span>لمده {{ $subPackage->duration }} اشهر </li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>see all products</li>
+                    <li><span class="fa-li"><i class="fas fa-check"></i></span>for  {{ $subPackage->duration }} @if ($subPackage->duration >=12)  year/s @else month/s @endif </li>
                   
                   </ul>
                   
-                  <form action ="{{ route('frontend.auth.subscripe.selecte', [ $subPackage->slug] )}}"  method="POST">
-                 @csrf()
-                    <button  class="btn btn-block btn-primary text-uppercase">اشترك</button>
+
+                  @if(!auth()->check())
                  
-                  </form>
+                  <a id="openLoginModal"
+                      class="btn btn-block btn-primary text-uppercase"
+                      data-target="#myModal" href="#">subscripe now <i
+                          class="fas fa-caret-right"></i></a>
+
+                  @else
+                  <form action ="{{ route('frontend.auth.subscripe.selecte', [ $subPackage->slug] )}}"  method="POST">
+                    @csrf()
+                        <button  class="btn btn-block btn-primary text-uppercase">subscripe now</button>
+                    
+                      </form>
+                  
+                  @endif
+
+
+
+                
                 </div>
               </div>
             </div>

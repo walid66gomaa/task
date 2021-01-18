@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('title', trans('labels.frontend.cart.subscripe').' | '.app_name())
+@section('title', trans('subscripe').' | '.app_name())
 
 @push('after-styles')
   
@@ -30,7 +30,7 @@
         <div class="container">
             <div class="section-title mb45 headline text-center">
                 <span class="subtitle text-uppercase">@lang('labels.frontend.cart.your_shopping_cart')</span>
-                <h2>اشترك في جميع الدورات</h2>
+                <h2>see all products</h2>
             </div>
             <div class="checkout-content">
                 @if(session()->has('danger'))

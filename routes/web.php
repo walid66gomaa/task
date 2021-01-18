@@ -18,6 +18,9 @@ use App\Http\Controllers\Frontend\Auth\SubPackageItemController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+    Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+    
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('index');
 
