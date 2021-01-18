@@ -1,6 +1,5 @@
 <?php
 
-use App\Helpers\General\Timezone;
 use App\Helpers\General\HtmlHelper;
 
 /*
@@ -82,5 +81,42 @@ if (!function_exists('script')) {
     function script($url, $attributes = [], $secure = null)
     {
         return resolve(HtmlHelper::class)->script($url, $attributes, $secure);
+    }
+}
+
+if (!function_exists('form_cancel')) {
+
+    /**
+     * @param        $cancel_to
+     * @param        $title
+     * @param string $classes
+     *
+     * @return mixed
+     */
+    function form_cancel($cancel_to, $title, $classes = 'btn btn-danger ')
+    {
+        return resolve(HtmlHelper::class)->formCancel($cancel_to, $title, $classes);
+    }
+}
+if (!function_exists('form_submit')) {
+
+    /**
+     * @param        $title
+     * @param string $classes
+     *
+     * @return mixed
+     */
+    function form_submit($title, $classes = 'btn btn-success pull-right')
+    {
+        return resolve(HtmlHelper::class)->formSubmit($title, $classes);
+    }
+}
+if (!function_exists('timezone')) {
+    /**
+     * Access the timezone helper.
+     */
+    function timezone()
+    {
+        return resolve(Timezone::class);
     }
 }
