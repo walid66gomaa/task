@@ -127,15 +127,9 @@ class UserRepository extends BaseRepository
                 $user->syncRoles($data['roles']);
                 $user->syncPermissions($data['permissions']);
 
-                if(in_array('teacher',$data['roles'])){
-                    $user->teacherProfile()->create();
-                }
+              
 
-                //Send confirmation email if requested and account approval is off
-                if (isset($data['confirmation_email']) && $user->confirmed == 0 && ! config('access.users.requires_approval')) {
-                    $user->notify(new UserNeedsConfirmation($user->confirmation_code));
-                }
-
+             
                 event(new UserCreated($user));
 
                 return $user;
@@ -173,13 +167,7 @@ class UserRepository extends BaseRepository
                 $user->syncRoles($data['roles']);
                 $user->syncPermissions($data['permissions']);
 
-                if(in_array('teacher',$data['roles'])){
-                    $user->teacherProfile()->create();
-                }else{
-                    if($user->teacherProfile){
-                        $user->teacherProfile()->delete();
-                    }
-                }
+            
                 event(new UserUpdated($user));
 
                 return $user;

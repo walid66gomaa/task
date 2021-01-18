@@ -2,12 +2,7 @@
     <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="{{ route('admin.dashboard') }}">
-        <img class="navbar-brand-full" src="{{asset('storage/logos/'.config('logo_b_image'))}}" height="40"
-             alt="Square Logo">
-        <img class="navbar-brand-minimized" src="{{asset('storage/logos/'.config('logo_popup'))}}" height="40"
-             alt="Square Logo">
-    </a>
+   
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,14 +30,10 @@
                 <span class="d-md-down-none">{{ $logged_in_user->full_name }}</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-header text-center">
-                    <strong>@lang('navs.general.account')</strong>
-                </div>
+               
 
 
-                <a class="dropdown-item" href="{{ route('admin.account') }}">
-                    <i class="fa fa-user"></i> @lang('navs.general.profile')
-                </a>
+               
 
                 <div class="divider"></div>
                 <a class="dropdown-item" href="{{ route('frontend.auth.logout') }}">

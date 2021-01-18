@@ -160,7 +160,6 @@ return array (
     array (
       'title' => 'Dashboard',
       'welcome' => 'Welcome',
-      'my_courses' => 'My Courses',
     ),
     'search' => 
     array (

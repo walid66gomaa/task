@@ -57,9 +57,7 @@ Route::group([
             Route::get('password/change', [UserPasswordController::class, 'edit'])->name('user.change-password');
             Route::patch('password/change', [UserPasswordController::class, 'update'])->name('user.change-password.post');
 
-            // Access
-            Route::get('login-as', [UserAccessController::class, 'loginAs'])->name('user.login-as');
-
+        
             // Session
             Route::get('clear-session', [UserSessionController::class, 'clearSession'])->name('user.clear-session');
 
@@ -69,18 +67,5 @@ Route::group([
         });
     });
 
-    /*
-     * Role Management
-     */
-    Route::group(['namespace' => 'Role'], function () {
-        Route::get('role', [RoleController::class, 'index'])->name('role.index');
-        Route::get('role/create', [RoleController::class, 'create'])->name('role.create');
-        Route::post('role', [RoleController::class, 'store'])->name('role.store');
-
-        Route::group(['prefix' => 'role/{role}'], function () {
-            Route::get('edit', [RoleController::class, 'edit'])->name('role.edit');
-            Route::patch('/', [RoleController::class, 'update'])->name('role.update');
-            Route::delete('/', [RoleController::class, 'destroy'])->name('role.destroy');
-        });
-    });
+  
 });

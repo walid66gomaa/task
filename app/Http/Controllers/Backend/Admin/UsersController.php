@@ -112,14 +112,11 @@ class UsersController extends Controller
             return abort(401);
         }
         $roles = Role::get()->pluck('title', 'id');
-        $courses = \App\Models\Course::whereHas('teachers',
-            function ($query) use ($id) {
-                $query->where('id', $id);
-            })->get();
+     
 
         $user = User::findOrFail($id);
 
-        return view('admin.users.show', compact('user', 'courses'));
+        return view('admin.users.show', compact('user'));
     }
 
 

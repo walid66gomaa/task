@@ -38,8 +38,7 @@
                         <li class="nav-item">
                             <a class="nav-link "
                                href="{{ route('admin.auth.user.index') }}">
-                                @lang('menus.backend.access.users.all')
-
+                                all users
                                 @if ($pending_approval > 0)
                                     <span class="badge badge-danger">{{ $pending_approval }}</span>
                                 @endif
@@ -48,19 +47,19 @@
                         <li class="nav-item">
                             <a class="nav-link "
                             href="{{ route('admin.auth.user.create') }}">
-                            @lang('menus.backend.access.users.create')
+                            Creat user
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link "
                                href="{{ route('admin.auth.user.deactivated') }}">
-                               @lang('menus.backend.access.users.deactivated')
+                           Deactivated users
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link "
                                href="{{ route('admin.auth.user.deleted') }}">
-                               @lang('menus.backend.access.users.deleted')
+                               Deleted users
                             </a>
                         </li>
 

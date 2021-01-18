@@ -35,7 +35,7 @@
                      
                         {!! Form::label('slug',  trans('slug'), ['class' => 'col-md-2 form-control-label']) !!}
                         <div class="col-md-10">
-                            {!! Form::text('slug', old('slug'), ['class' => 'form-control', 'placeholder' =>  trans('labels.backend.courses.slug_placeholder')]) !!}
+                            {!! Form::text('slug', old('slug'), ['class' => 'form-control', 'placeholder' =>  'slug']) !!}
         
                         </div><!--col-->
                     </div><!--form-group-->
@@ -43,10 +43,10 @@
                     <div class="form-group row">
                      
                        
-                        {!! Form::label('price',  trans('labels.backend.courses.fields.price').' (in $)', ['class' => 'col-md-2 form-control-label']) !!}
+                        {!! Form::label('price',  trans('price').' (in $)', ['class' => 'col-md-2 form-control-label']) !!}
                         
                         <div class="col-md-10">
-                            {!! Form::number('price', old('price'), ['class' => 'form-control', 'placeholder' => trans('labels.backend.courses.fields.price'),'step' => 'any', 'pattern' => "[0-9]"]) !!}
+                            {!! Form::number('price', old('price'), ['class' => 'form-control', 'placeholder' => trans('price'),'step' => 'any', 'pattern' => "[0-9]"]) !!}
                            
                         </div><!--col-->
                     </div><!--form-group-->

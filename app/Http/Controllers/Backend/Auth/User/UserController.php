@@ -52,7 +52,7 @@ class UserController extends Controller
     }
 
     /**
-     * Display a listing of Courses via ajax DataTable.
+     * Display a listing  via ajax DataTable.
      *
      * @return \Illuminate\Http\Response
      */

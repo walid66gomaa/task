@@ -12,10 +12,10 @@
 
     @if(isset($class))
         <a data-method="delete" data-trans-button-cancel="{{__('buttons.general.cancel')}}"
-           data-trans-button-confirm="{{__('buttons.general.crud.delete')}}" data-trans-title="{{__('strings.backend.general.are_you_sure')}}"
+           data-trans-button-confirm="{{'delete'}}" data-trans-title="{{__('strings.backend.general.are_you_sure')}}"
            class="{{$class}}" style="cursor:pointer;"
            onclick="$(this).find('form').submit();">
-            {{__('buttons.general.crud.delete')}}
+            {{'buttons.general.crud.delete'}}
             <form action="{{$route}}"
                   method="POST" name="delete_item" style="display:none">
                 @csrf

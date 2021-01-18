@@ -7,7 +7,7 @@
 
   <div class="card">
         <div class="card-header">
-            <h3 class="page-title d-inline">@lang('labels.backend.subPackages.create')</h3>
+            <h3 class="page-title d-inline">@lang('update')</h3>
             <div class="float-right">
                 <a href="{{ route('admin.subPackages.index') }}"
                    class="btn btn-success">@lang('labels.backend.subPackages.view')</a>
@@ -33,7 +33,7 @@
 
                     <div class="form-group row">
                      
-                        {!! Form::label('slug',  trans('labels.backend.courses.fields.slug'), ['class' => 'col-md-2 form-control-label']) !!}
+                        {!! Form::label('slug',  trans('slug'), ['class' => 'col-md-2 form-control-label']) !!}
                         <div class="col-md-10">
                             {{ html()->text('slug')
                             ->class('form-control')
@@ -47,7 +47,7 @@
                     <div class="form-group row">
                      
                        
-                        {!! Form::label('price',  trans('labels.backend.courses.fields.price').' (in '.$appCurrency["symbol"].')', ['class' => 'col-md-2 form-control-label']) !!}
+                        {!! Form::label('price',  trans('price').' (in USD'.')', ['class' => 'col-md-2 form-control-label']) !!}
                         
                         <div class="col-md-10">
                            {{
@@ -63,7 +63,7 @@
                     <div class="form-group row">
                      
                        
-                        {!! Form::label('duration',  trans('labels.backend.courses.fields.duration').' (in monthes)', ['class' => 'col-md-2 form-control-label']) !!}
+                        {!! Form::label('duration',  trans('duration').' (in monthes)', ['class' => 'col-md-2 form-control-label']) !!}
                         
                         <div class="col-md-10">
                             {{ html()->number('duration')
@@ -97,7 +97,7 @@
                     </div>
 
                     <div class="form-group row">
-                        {{ html()->label(__('labels.backend.teachers.fields.status'))->class('col-md-2 form-control-label')->for('active') }}
+                        {{ html()->label('status')->class('col-md-2 form-control-label')->for('active') }}
                         <div class="col-md-10">
                             {{ html()->label(html()->checkbox('')->name('active')
                                         ->checked(($subPackage->active == 1) ? true : false)->class('switch-input')->value(($subPackage->active == 1) ? 1 : 0)

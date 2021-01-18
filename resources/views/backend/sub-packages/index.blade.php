@@ -8,13 +8,13 @@
     <div class="card">
         <div class="card-header">
             <h3 class="page-title d-inline">@lang('labels.backend.subPackages.title')</h3>
-            @can('course_create')
+          
                 <div class="float-right">
                     <a href="{{ route('admin.subPackages.create') }}"
                        class="btn btn-success">@lang('strings.backend.general.app_add_new')</a>
 
                 </div>
-            @endcan
+          
         </div>
         <div class="card-body">
             <div class="row">
