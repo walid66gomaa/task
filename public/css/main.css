@@ -1,0 +1,121 @@
+
+/* start subscribe section */
+.sub-container
+   {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+   }
+   .sub-text
+   {
+       display: block;
+   }
+    .sub-text h2 
+    {
+        font-size: 34px;
+    line-height: 1.42em;
+    color: #3f3a64;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 700;
+    letter-spacing: 0em;
+}
+    .sub-text h2 mark
+    {
+        font-weight: 400;
+        color: #20ad96;
+        background: 0 0;
+    text-decoration: none;
+    }
+
+    .sub-discription
+    {
+        font-size: 18px;
+    font-weight: 600;
+    line-height: 1.67em;
+    color: #696969;
+    box-sizing: border-box;
+    }
+
+    .sub-form .form-input
+    {
+   padding-right: calc(0px/2);
+        padding-left: calc(0px/2);
+        margin-bottom: 0;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        align-items: center;
+        position: relative;
+        min-height: 1px;
+    
+        display: flex;
+        box-sizing: border-box;
+    }
+    .sub-form input
+    {
+   border-width: 1px 1px 1px 0;
+    border-radius: 0 5px 5px 0;
+    min-height: 52px;
+    padding: 3px 20px;
+    color: #7e7e7e;
+    background-color: #f5f5f5;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #20ad96;
+ 
+    background-color: transparent;
+    color: #373a3c;
+    vertical-align: middle;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    }
+
+   
+
+    .sub-form .form-submit{
+        
+    padding-right: calc(0px/2);
+    padding-left: calc(0px/2);
+    margin-bottom: 0;
+    width: 160px;
+    position: relative;
+    min-height: 1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    
+    }
+
+    .sub-form button{
+
+    border-radius: 5px 0 0 5px;
+    width: 160px;
+    flex-basis: 100%;
+    font-size: 14px;
+    border: none;
+    padding: 5px 30px;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-transform: none;
+    color: #fff;
+    border-color: #20ad96;
+    background-color: #20ad96 ;
+    line-height: 1;
+   
+    height: 52px;
+    }
+/* end subscribe section */
