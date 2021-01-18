@@ -1,10 +1,12 @@
-### install
-
-composer install
+### To install
 
 
+```
+git clone --branch development https://github.com/walid66gomaa/task.git
+* composer install
+* copy .env.example  to .env
 * Create Database
-copy .env.example  to .env
+
 * Artisan Commands
 ```
 php artisan key:generate
