@@ -25,7 +25,10 @@
                         <li class="uk-nav-header"><a href="{{ route('frontend.index') }}">
                                 @lang('navs.general.home')</a>
                         </li>
-                      
+                        <li><a href="{{ route('frontend.index') }}">@lang('navs.general.home')</a></li>
+                        <li><a href="{{ route('frontend.auth.subscripe') }}">@lang('custom-menu.nav-menu.subscripe')</a></li>
+                   
+                        
                     </ul>
                 </div>
             </div>
@@ -34,9 +37,17 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
             
-             
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{{ route('frontend.index') }}">
+                        @lang('navs.general.home')
+                    </a>
+                </li>
                
-              
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{{ route('frontend.auth.subscripe') }}">
+                        {{trans('custom-menu.nav-menu.subscripe')}}
+                    </a>
+                </li>
               
 
                 

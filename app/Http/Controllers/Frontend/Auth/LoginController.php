@@ -159,10 +159,7 @@ class LoginController extends Controller
     public function logout(Request $request)
     {
       
-        /*
-         * Remove any session data from backend
-         */
-        app()->make(Auth::class)->flushTempSession();
+       
 
         /*
          * Fire event, Log out user, Redirect

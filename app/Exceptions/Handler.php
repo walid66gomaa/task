@@ -2,9 +2,14 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+use Illuminate\Auth\AuthenticationException;
+use Spatie\Permission\Exceptions\UnauthorizedException;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
+/**
+ * Class Handler.
+ */
 class Handler extends ExceptionHandler
 {
     /**
@@ -29,10 +34,8 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param  \Throwable  $exception
+     * @param  \Exception  $exception
      * @return void
-     *
-     * @throws \Exception
      */
     public function report(Throwable $exception)
     {
@@ -43,13 +46,30 @@ class Handler extends ExceptionHandler
      * Render an exception into an HTTP response.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Throwable  $exception
-     * @return \Symfony\Component\HttpFoundation\Response
-     *
-     * @throws \Throwable
+     * @param  \Exception  $exception
+     * @return \Illuminate\Http\Response
      */
     public function render($request, Throwable $exception)
     {
+        if ($exception instanceof UnauthorizedException) {
+            return redirect()
+                ->route(home_route())
+                ->withFlashDanger(__('auth.general_error'));
+        }
+
         return parent::render($request, $exception);
+    }
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @param AuthenticationException  $exception
+     *
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse
+     */
+    protected function unauthenticated($request, AuthenticationException $exception)
+    {
+        return $request->expectsJson()
+            ? response()->json(['message' => 'Unauthenticated.'], 401)
+            : redirect()->guest(route('frontend.auth.login'));
     }
 }
