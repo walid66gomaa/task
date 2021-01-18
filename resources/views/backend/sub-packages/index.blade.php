@@ -21,13 +21,7 @@
                 <div class="col-12">
                     <div class="table-responsive">
                         <div class="d-block">
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <a href="{{ route('admin.subPackages.index') }}"
-                                       style="{{ request('show_deleted') == 1 ? '' : 'font-weight: 700' }}">{{trans('labels.general.all')}}</a>
-                                </li>
-                            
-                            </ul>
+                        
                         </div>
 
 

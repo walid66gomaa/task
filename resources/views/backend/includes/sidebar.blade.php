@@ -22,9 +22,7 @@
    
 
 
-                <li class="nav-title">
-                    @lang('menus.backend.sidebar.system')
-                </li>
+           
 
                 <li class="nav-item nav-dropdown ">
                     <a class="nav-link nav-dropdown-toggle "

@@ -5,7 +5,21 @@ return array (
   array (
    
    
-    
+    'subPackages' => 
+    array (
+      'title' => ' subscription packages',
+      'fields' => 
+      array (
+        'title' => 'title',
+        'slug' => 'slug',
+        'price' => 'price',
+        'duration' => 'duration',
+        'description' => 'description',
+        'status' => 'status',
+      ),
+      'view' => 'view',
+      'create' => 'create',
+    ),
   
     'access' => 
     array (

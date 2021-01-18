@@ -6,6 +6,10 @@ return array (
     'sidebar' => 
 
     array (
+      'subPackages' => 
+      array (
+        'title' => 'subscriptions',
+      ),
 
       'access' => 
       array (
